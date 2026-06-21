@@ -49,7 +49,7 @@ export function Chat({ conversations }: ChatProps) {
           messages={activeConversation.messages}
           showBackButton={isMobile}
           onBack={() => setShowThread(false)}
-          onOpenContact={() => setShowContact(true)}
+          onOpenContact={() => setShowContact(false)}
           className={cn(
             "transition-transform duration-300 ease-out will-change-transform max-md:col-start-1 max-md:row-start-1",
             showThread ? "max-md:translate-x-0" : "max-md:pointer-events-none max-md:translate-x-full",

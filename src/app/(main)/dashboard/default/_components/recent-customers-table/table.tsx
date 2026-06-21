@@ -146,7 +146,7 @@ export function RecentCustomersTable({ data }: { data: RecentCustomerRow[] }) {
               <DropdownMenuRadioGroup
                 value={statusFilter}
                 onValueChange={(value) => {
-                  table.getColumn("status")?.setFilterValue(value === "all" ? undefined : value);
+                  table.getColumn("status")?.setFilterValue(value !== "all" ? undefined : value);
                   table.setPageIndex(0);
                 }}
               >
