@@ -1,8 +1,10 @@
+//#region Imports
 import { recentLeadsData } from "./_components/crm.config";
 import { InsightCards } from "./_components/insight-cards";
 import { OperationalCards } from "./_components/operational-cards";
 import { OverviewCards } from "./_components/overview-cards";
 import { RecentLeadsTable } from "./_components/recent-leads-table/table";
+//#endregion
 
 export default function Page() {
   return (

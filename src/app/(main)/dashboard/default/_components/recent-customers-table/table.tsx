@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import * as React from "react";
 
 import {
@@ -43,6 +44,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { recentCustomersColumns } from "./columns";
 import type { RecentCustomerRow } from "./schema";
 
+//#endregion
+
+//#region statusOptions
 const statusOptions = [
   { value: "all", label: "All" },
   { value: "Subscribed", label: "Subscribed" },
@@ -67,8 +71,10 @@ const sortOptions = [
   { value: "name-asc", label: "Name A-Z" },
   { value: "name-desc", label: "Name Z-A" },
 ] as const;
+//#endregion
 
 export function RecentCustomersTable({ data }: { data: RecentCustomerRow[] }) {
+  //#region RecentCustomersTable
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
   const [sorting, setSorting] = React.useState<SortingState>([{ id: "joined", desc: true }]);
@@ -118,6 +124,7 @@ export function RecentCustomersTable({ data }: { data: RecentCustomerRow[] }) {
 
     return "newest";
   }, [sorting]);
+  //#endregion
 
   return (
     <div className="space-y-4">
@@ -146,7 +153,7 @@ export function RecentCustomersTable({ data }: { data: RecentCustomerRow[] }) {
               <DropdownMenuRadioGroup
                 value={statusFilter}
                 onValueChange={(value) => {
-                  table.getColumn("status")?.setFilterValue(value === "all" ? undefined : value);
+                  table.getColumn("status")?.setFilterValue(value !== "all" ? undefined : value);
                   table.setPageIndex(0);
                 }}
               >

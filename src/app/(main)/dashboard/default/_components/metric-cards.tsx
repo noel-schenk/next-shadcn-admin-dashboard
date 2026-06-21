@@ -1,7 +1,9 @@
+//#region Imports
 import { DollarSign, TrendingDown, TrendingUp, UserPlus, Users, Waves } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+//#endregion
 
 export function MetricCards() {
   return (

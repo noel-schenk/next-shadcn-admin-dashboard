@@ -1,6 +1,8 @@
+//#region Imports
 import { MetricCards } from "./_components/metric-cards";
 import { PerformanceOverview } from "./_components/performance-overview";
 import { SubscriberOverview } from "./_components/subscriber-overview";
+//#endregion
 
 export default function Page() {
   return (

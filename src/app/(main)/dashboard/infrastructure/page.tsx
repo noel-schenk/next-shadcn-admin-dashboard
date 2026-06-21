@@ -1,9 +1,11 @@
+//#region Imports
 import { infrastructureGroups } from "./_components/infrastructure-data";
 import { InfrastructureHeader } from "./_components/infrastructure-header";
 import { ProjectEnvironments } from "./_components/project-environments";
 
 // Import this stylesheet in any page or component that renders country flag classes.
 import "@/styles/flag-icons/flags.css";
+//#endregion
 
 export default function Page() {
   return (

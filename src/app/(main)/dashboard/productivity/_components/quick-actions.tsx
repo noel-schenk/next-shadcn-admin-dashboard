@@ -1,6 +1,9 @@
+//#region Imports
 import { CheckSquare, FileText, Focus, Orbit, Upload } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+
+//#endregion
 
 const quickActions = [
   { label: "New Note", icon: FileText },

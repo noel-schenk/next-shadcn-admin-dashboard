@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { ChevronDown, Filter, PanelRightClose, PanelRightOpen, Pin } from "lucide-react";
 
 import { Avatar, AvatarBadge, AvatarFallback } from "@/components/ui/avatar";
@@ -14,6 +15,8 @@ import { cn, getInitials } from "@/lib/utils";
 import type { Conversation } from "./data";
 import { useChat } from "./use-chat";
 
+//#endregion
+
 interface ChatConversationListProps {
   conversations: Conversation[];
   onSelectConversation?: (conversation: Conversation) => void;
@@ -21,6 +24,7 @@ interface ChatConversationListProps {
 }
 
 export function ChatConversationList({ conversations, onSelectConversation, className }: ChatConversationListProps) {
+  //#region ChatConversationList
   const [chat, setChat] = useChat();
   const { state, toggleSidebar } = useSidebar();
   const isCollapsed = state === "collapsed";
@@ -36,6 +40,7 @@ export function ChatConversationList({ conversations, onSelectConversation, clas
     }
     return groups;
   }, []);
+  //#endregion
 
   return (
     <div className={cn("flex h-full flex-col gap-3 py-3", className)}>

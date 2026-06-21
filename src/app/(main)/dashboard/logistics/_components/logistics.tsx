@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
@@ -7,8 +8,10 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import { shipments } from "./shipment-data";
 import { ShipmentDetails } from "./shipment-details";
 import { ShipmentList } from "./shipment-list";
+//#endregion
 
 export function Logistics() {
+  //#region Logistics
   const [detailsOpen, setDetailsOpen] = React.useState(false);
   const [selectedShipmentId, setSelectedShipmentId] = React.useState<string | null>(shipments[0].id);
   const selectedShipment = shipments.find((shipment) => shipment.id === selectedShipmentId) ?? shipments[0];
@@ -20,6 +23,7 @@ export function Logistics() {
       setDetailsOpen(true);
     }
   }
+  //#endregion
 
   return (
     <>

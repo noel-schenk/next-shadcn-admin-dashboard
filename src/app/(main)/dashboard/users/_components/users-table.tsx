@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import type { MouseEvent } from "react";
 
 import { flexRender, type Table as TableType } from "@tanstack/react-table";
@@ -19,6 +20,8 @@ import { Separator } from "@/components/ui/separator";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 import type { UserRow } from "./data";
+
+//#endregion
 
 function preventPaginationNavigation(event: MouseEvent<HTMLAnchorElement>) {
   event.preventDefault();

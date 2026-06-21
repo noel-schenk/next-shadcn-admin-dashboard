@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import { useMemo } from "react";
 
 import { flexRender, type Table as TableType } from "@tanstack/react-table";
@@ -19,6 +20,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { cn } from "@/lib/utils";
 
 import type { Role } from "./data";
+
+//#endregion
 
 type RoleTableRow = ReturnType<TableType<Role>["getRowModel"]>["rows"][number];
 
@@ -41,6 +44,7 @@ function groupRowsByRoleGroup(rows: RoleTableRow[]) {
 }
 
 export function RolesTable({ table }: { table: TableType<Role> }) {
+  //#region RolesTable
   const { pageIndex, pageSize } = table.getState().pagination;
   const pageRows = table.getRowModel().rows;
   const filteredRows = table.getFilteredRowModel().rows;
@@ -55,6 +59,7 @@ export function RolesTable({ table }: { table: TableType<Role> }) {
   const start = filteredRows.length === 0 ? 0 : pageIndex * pageSize + 1;
   const end = filteredRows.length === 0 ? 0 : start + pageRows.length - 1;
   const colCount = table.getVisibleLeafColumns().length;
+  //#endregion
 
   return (
     <>

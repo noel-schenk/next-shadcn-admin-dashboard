@@ -1,11 +1,14 @@
 "use client";
 
+//#region Imports
 import { useEffect, useMemo, useState } from "react";
 
 import { type GeoPermissibleObjects, geoMercator, geoPath } from "d3-geo";
 import { feature, mesh } from "topojson-client";
 
 import type { GeoCoordinate, Shipment } from "./shipment-data";
+
+//#endregion
 
 type WorldTopology = {
   objects: {
@@ -79,6 +82,7 @@ type ShipmentRouteMapProps = {
 };
 
 export function ShipmentRouteMap({ shipment }: ShipmentRouteMapProps) {
+  //#region ShipmentRouteMap
   const [borders, setBorders] = useState<GeoJSON.MultiLineString | null>(null);
   const [land, setLand] = useState<GeoJSON.FeatureCollection | null>(null);
 
@@ -169,6 +173,7 @@ export function ShipmentRouteMap({ shipment }: ShipmentRouteMapProps) {
         : [],
     };
   }, [shipment]);
+  //#endregion
 
   return (
     <div className="size-full min-h-0 overflow-hidden bg-[#d4dadc] dark:bg-[#2C353C]">

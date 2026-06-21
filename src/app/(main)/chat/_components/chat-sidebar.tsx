@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { EllipsisVertical, LogOut, Settings, UserRound } from "lucide-react";
 import { siFacebook, siInstagram, siWhatsapp } from "simple-icons";
 
@@ -30,6 +31,8 @@ import {
 import { getInitials } from "@/lib/utils";
 
 import { channelItems, currentUser, navItems, viewItems } from "./data";
+
+//#endregion
 
 const channelBrandIcons = {
   whatsapp: siWhatsapp,

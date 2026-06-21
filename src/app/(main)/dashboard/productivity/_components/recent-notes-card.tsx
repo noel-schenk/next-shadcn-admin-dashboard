@@ -1,8 +1,11 @@
+//#region Imports
 import { format, isToday, isYesterday, subDays } from "date-fns";
 import { BookOpen, FileText } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+//#endregion
 
 const today = new Date();
 

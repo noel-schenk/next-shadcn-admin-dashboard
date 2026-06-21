@@ -1,9 +1,11 @@
 "use client"
 
+//#region Imports
 import * as React from "react"
 import { HoverCard as HoverCardPrimitive } from "radix-ui"
 
 import { cn } from "@/lib/utils"
+//#endregion
 
 function HoverCard({
   ...props

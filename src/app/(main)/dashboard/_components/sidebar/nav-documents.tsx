@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { Ellipsis, Folder, Forward, type LucideIcon, Trash2 } from "lucide-react";
 
 import {
@@ -18,6 +19,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+//#endregion
 
 export function NavDocuments({
   items,

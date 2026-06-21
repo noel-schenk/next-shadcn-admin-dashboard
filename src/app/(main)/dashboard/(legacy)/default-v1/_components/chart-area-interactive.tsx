@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
@@ -9,6 +10,7 @@ import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } f
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useIsMobile } from "@/hooks/use-mobile";
+//#endregion
 
 export const description = "An interactive area chart";
 
@@ -121,6 +123,7 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function ChartAreaInteractive() {
+  //#region ChartAreaInteractive
   const isMobile = useIsMobile();
   const [timeRange, setTimeRange] = React.useState("90d");
 
@@ -143,6 +146,7 @@ export function ChartAreaInteractive() {
     startDate.setDate(startDate.getDate() - daysToSubtract);
     return date >= startDate;
   });
+  //#endregion
 
   return (
     <Card className="@container/card">

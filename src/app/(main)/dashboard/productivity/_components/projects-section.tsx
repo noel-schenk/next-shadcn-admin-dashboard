@@ -1,3 +1,4 @@
+//#region Imports
 import { addDays, format } from "date-fns";
 import { ClipboardCheck, Globe, Orbit, Plus } from "lucide-react";
 
@@ -6,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+//#endregion
 
 const today = new Date();
 

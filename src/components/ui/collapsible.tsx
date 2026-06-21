@@ -1,6 +1,8 @@
 "use client"
 
+//#region Imports
 import { Collapsible as CollapsiblePrimitive } from "radix-ui"
+//#endregion
 
 function Collapsible({
   ...props

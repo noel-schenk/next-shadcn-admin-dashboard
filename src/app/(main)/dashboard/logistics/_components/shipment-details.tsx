@@ -1,3 +1,4 @@
+//#region Imports
 import { AlertTriangleIcon, Copy, Plane, Ship, Star, Truck } from "lucide-react";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -10,6 +11,8 @@ import { cn } from "@/lib/utils";
 
 import type { Shipment } from "./shipment-data";
 import { ShipmentRouteMap } from "./shipment-route-map";
+
+//#endregion
 
 const modeIcons = {
   air: Plane,
@@ -74,9 +77,11 @@ function EmptyShipmentOverview() {
 }
 
 function ShipmentOverview({ shipment }: { shipment: Shipment }) {
+  //#region ShipmentOverview
   const ContactIcon = modeIcons[shipment.mode];
   const contactLabel = getContactLabel(shipment.mode);
   const transportNumberLabel = getTransportNumberLabel(shipment.mode);
+  //#endregion
 
   return (
     <div className="flex flex-col gap-4">

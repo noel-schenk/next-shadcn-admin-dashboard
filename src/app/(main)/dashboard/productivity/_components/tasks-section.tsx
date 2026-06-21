@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { Calendar1, Plus } from "lucide-react";
@@ -8,6 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+//#endregion
 
 type Task = {
   title: string;
@@ -25,7 +28,9 @@ const tasks: Task[] = [
 ];
 
 export function TasksSection() {
+  //#region TasksSection
   const [items, setItems] = React.useState(tasks);
+  //#endregion
 
   return (
     <section className="flex flex-col gap-2">

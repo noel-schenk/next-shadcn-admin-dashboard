@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import type { ColumnDef } from "@tanstack/react-table";
 import { EllipsisVertical } from "lucide-react";
 
@@ -17,6 +18,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import type { RecentLeadRow } from "./schema";
+//#endregion
 
 export const recentLeadsColumns: ColumnDef<RecentLeadRow>[] = [
   {

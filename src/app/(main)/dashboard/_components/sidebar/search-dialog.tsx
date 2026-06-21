@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { useRouter } from "next/navigation";
@@ -19,6 +20,8 @@ import {
 } from "@/components/ui/command";
 import type { NavMainItem } from "@/navigation/sidebar/sidebar-items";
 import { sidebarItems } from "@/navigation/sidebar/sidebar-items";
+
+//#endregion
 
 type SearchItem = {
   id: string;
@@ -78,6 +81,7 @@ function groupBy(items: SearchItem[]) {
 }
 
 export function SearchDialog() {
+  //#region SearchDialog
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
   const router = useRouter();
@@ -129,6 +133,7 @@ export function SearchDialog() {
         </CommandGroup>
       </React.Fragment>
     ));
+  //#endregion
 
   return (
     <>

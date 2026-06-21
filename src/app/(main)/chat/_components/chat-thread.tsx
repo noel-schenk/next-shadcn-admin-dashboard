@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import {
   AlarmClock,
   ArrowLeft,
@@ -35,6 +36,8 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { cn, getInitials } from "@/lib/utils";
 
 import { type Contact, currentUser, type Message } from "./data";
+
+//#endregion
 
 interface ChatThreadProps {
   contact: Contact;

@@ -6,9 +6,12 @@
  * Runs early in <head> to apply the correct data attributes before hydration,
  * preventing layout or theme flicker and keeping RootLayout fully static.
  */
+//#region Imports
 import { PREFERENCE_DEFAULTS, PREFERENCE_PERSISTENCE } from "@/lib/preferences/preferences-config";
+//#endregion
 
 export function ThemeBootScript() {
+  //#region ThemeBootScript
   const persistence = JSON.stringify({
     theme_mode: PREFERENCE_PERSISTENCE.theme_mode,
     theme_preset: PREFERENCE_PERSISTENCE.theme_preset,
@@ -106,8 +109,8 @@ export function ThemeBootScript() {
         console.warn("ThemeBootScript error:", e);
       }
     })();
-  `;
-
+   `;
+  //#endregion
   /* biome-ignore lint/security/noDangerouslySetInnerHtml: required for pre-hydration boot script */
   return <script dangerouslySetInnerHTML={{ __html: code }} />;
 }

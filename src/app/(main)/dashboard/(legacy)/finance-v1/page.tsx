@@ -1,3 +1,4 @@
+//#region Imports
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { CardOverview } from "./_components/card-overview";
@@ -8,6 +9,7 @@ import { NetWorth } from "./_components/kpis/net-worth";
 import { PrimaryAccount } from "./_components/kpis/primary-account";
 import { SavingsRate } from "./_components/kpis/savings-rate";
 import { SpendingBreakdown } from "./_components/spending-breakdown";
+//#endregion
 
 export default function Page() {
   return (

@@ -1,10 +1,13 @@
 "use client";
 
+//#region Imports
 import { Ellipsis } from "lucide-react";
 import { CartesianGrid, ComposedChart, Line, XAxis, YAxis } from "recharts";
 
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+
+//#endregion
 
 const qualitySeries = [
   { date: "2026-04-01T00:00:00.000Z", actualQuality: 0.4, baselineQuality: -1.2 },

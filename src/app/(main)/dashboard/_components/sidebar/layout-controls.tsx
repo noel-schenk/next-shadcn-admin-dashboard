@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { Settings } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -21,8 +22,10 @@ import { persistPreference } from "@/lib/preferences/preferences-storage";
 import { THEME_PRESET_OPTIONS, type ThemeMode, type ThemePreset } from "@/lib/preferences/theme";
 import { applyThemePreset } from "@/lib/preferences/theme-utils";
 import { usePreferencesStore } from "@/stores/preferences/preferences-provider";
+//#endregion
 
 export function LayoutControls() {
+  //#region LayoutControls
   const themeMode = usePreferencesStore((s) => s.themeMode);
   const resolvedThemeMode = usePreferencesStore((s) => s.resolvedThemeMode);
   const setThemeMode = usePreferencesStore((s) => s.setThemeMode);
@@ -95,6 +98,7 @@ export function LayoutControls() {
     onSidebarCollapseModeChange(PREFERENCE_DEFAULTS.sidebar_collapsible);
     onFontChange(PREFERENCE_DEFAULTS.font);
   };
+  //#endregion
 
   return (
     <Popover>

@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { useCalendarController } from "@fullcalendar/react";
@@ -18,6 +19,8 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectVa
 
 import { demoEvents } from "./events-data";
 
+//#endregion
+
 const views = [
   { key: "dayGridMonth", label: "Month" },
   { key: "timeGridWeek", label: "Week" },
@@ -35,6 +38,7 @@ const calendars = [
 const plugins = [dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin, multiMonthPlugin];
 
 export function Calendar() {
+  //#region Calendar
   const controller = useCalendarController();
   const [eventCount, setEventCount] = React.useState(0);
   const [selectedCalendar, setSelectedCalendar] = React.useState(calendars[0].key);
@@ -48,6 +52,7 @@ export function Calendar() {
   });
   const title = dateInfo.title;
   const days = dateInfo.days;
+  //#endregion
 
   return (
     <div className="flex flex-col overflow-hidden rounded-md border">

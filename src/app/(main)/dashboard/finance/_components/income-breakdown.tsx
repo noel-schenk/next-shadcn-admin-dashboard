@@ -1,5 +1,7 @@
+//#region Imports
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+//#endregion
 
 export function IncomeBreakdown() {
   return (

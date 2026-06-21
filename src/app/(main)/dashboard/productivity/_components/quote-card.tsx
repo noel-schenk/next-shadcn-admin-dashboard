@@ -1,4 +1,6 @@
+//#region Imports
 import { Quote } from "lucide-react";
+//#endregion
 
 export function QuoteCard() {
   return (

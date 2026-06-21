@@ -1,9 +1,11 @@
 "use client"
 
+//#region Imports
 import * as React from "react"
 import { Avatar as AvatarPrimitive } from "radix-ui"
 
 import { cn } from "@/lib/utils"
+//#endregion
 
 function Avatar({
   className,

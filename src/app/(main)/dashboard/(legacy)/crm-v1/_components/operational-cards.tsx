@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { Clock } from "lucide-react";
 import { Funnel, FunnelChart, LabelList } from "recharts";
 
@@ -10,6 +11,7 @@ import { Progress } from "@/components/ui/progress";
 import { cn, formatCurrency } from "@/lib/utils";
 
 import { actionItems, regionSalesData, salesPipelineChartConfig, salesPipelineChartData } from "./crm.config";
+//#endregion
 
 export function OperationalCards() {
   const totalSales = regionSalesData.reduce((sum, region) => sum + region.sales, 0);

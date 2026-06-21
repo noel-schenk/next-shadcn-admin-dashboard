@@ -1,8 +1,11 @@
+//#region Imports
 import { siBarclays, siBitcoin, siEthereum, siHsbc, siRevolut } from "simple-icons";
 
 import { SimpleIcon } from "@/components/simple-icon";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+
+//#endregion
 
 const walletCards = [
   {

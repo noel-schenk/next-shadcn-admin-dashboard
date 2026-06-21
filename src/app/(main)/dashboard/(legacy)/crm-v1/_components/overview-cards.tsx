@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { format, subMonths } from "date-fns";
 import { BadgeDollarSign, Wallet } from "lucide-react";
 import { Area, AreaChart, Bar, BarChart, Line, LineChart, XAxis } from "recharts";
@@ -15,6 +16,8 @@ import {
   revenueChartConfig,
   revenueChartData,
 } from "./crm.config";
+
+//#endregion
 
 const lastMonth = format(subMonths(new Date(), 1), "LLLL");
 

@@ -1,5 +1,6 @@
 "use client"
 
+//#region Imports
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "radix-ui"
@@ -23,6 +24,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { PanelLeftIcon } from "lucide-react"
+//#endregion
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -65,6 +67,7 @@ function SidebarProvider({
   open?: boolean
   onOpenChange?: (open: boolean) => void
 }) {
+  //#region SidebarProvider
   const isMobile = useIsMobile()
   const [openMobile, setOpenMobile] = React.useState(false)
 
@@ -124,6 +127,7 @@ function SidebarProvider({
     }),
     [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
   )
+  //#endregion
 
   return (
     <SidebarContext.Provider value={contextValue}>
@@ -161,6 +165,7 @@ function Sidebar({
   variant?: "sidebar" | "floating" | "inset"
   collapsible?: "offcanvas" | "icon" | "none"
 }) {
+  //#region Sidebar
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
   if (collapsible === "none") {
@@ -203,6 +208,7 @@ function Sidebar({
       </Sheet>
     )
   }
+  //#endregion
 
   return (
     <div
@@ -500,6 +506,7 @@ function SidebarMenuButton({
   isActive?: boolean
   tooltip?: string | React.ComponentProps<typeof TooltipContent>
 } & VariantProps<typeof sidebarMenuButtonVariants>) {
+  //#region SidebarMenuButton
   const Comp = asChild ? Slot.Root : "button"
   const { isMobile, state } = useSidebar()
 
@@ -523,6 +530,7 @@ function SidebarMenuButton({
       children: tooltip,
     }
   }
+  //#endregion
 
   return (
     <Tooltip>
@@ -587,10 +595,12 @@ function SidebarMenuSkeleton({
 }: React.ComponentProps<"div"> & {
   showIcon?: boolean
 }) {
+  //#region SidebarMenuSkeleton
   // Random width between 50 to 90%.
   const [width] = React.useState(() => {
     return `${Math.floor(Math.random() * 40) + 50}%`
   })
+  //#endregion
 
   return (
     <div

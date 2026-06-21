@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import * as React from "react";
 
 import {
@@ -26,8 +27,10 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { filters, type UserRow } from "./data";
 import { usersColumns } from "./users-columns";
 import { UsersTable } from "./users-table";
+//#endregion
 
 export function Users({ users }: { users: UserRow[] }) {
+  //#region Users
   const [rowSelection, setRowSelection] = React.useState({});
   const [sorting, setSorting] = React.useState<SortingState>([{ id: "joinedDate", desc: true }]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
@@ -75,6 +78,7 @@ export function Users({ users }: { users: UserRow[] }) {
     table.getColumn(columnId)?.setFilterValue(value === "All" ? undefined : value);
     table.setPageIndex(0);
   }
+  //#endregion
 
   return (
     <Card>

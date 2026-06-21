@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { Download } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,8 @@ import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle }
 import customersData from "./data.json";
 import type { RecentCustomerRow } from "./recent-customers-table/schema";
 import { RecentCustomersTable } from "./recent-customers-table/table";
+
+//#endregion
 
 const customers = customersData as RecentCustomerRow[];
 

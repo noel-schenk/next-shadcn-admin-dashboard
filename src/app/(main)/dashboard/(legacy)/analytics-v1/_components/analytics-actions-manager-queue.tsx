@@ -1,6 +1,9 @@
+//#region Imports
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatCurrency } from "@/lib/utils";
+
+//#endregion
 
 const NEXT_INTERVENTIONS = [
   {

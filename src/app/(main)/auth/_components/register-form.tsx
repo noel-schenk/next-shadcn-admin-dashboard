@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -8,6 +9,8 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Field, FieldError, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+
+//#endregion
 
 const formSchema = z
   .object({
@@ -21,6 +24,7 @@ const formSchema = z
   });
 
 export function RegisterForm() {
+  //#region RegisterForm
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,6 +43,7 @@ export function RegisterForm() {
       ),
     });
   };
+  //#endregion
 
   return (
     <form noValidate onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4">

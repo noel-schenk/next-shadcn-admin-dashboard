@@ -1,7 +1,9 @@
+//#region Imports
 import { TrendingDown, TrendingUp } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+//#endregion
 
 export function SectionCards() {
   return (

@@ -1,3 +1,4 @@
+//#region Imports
 import type { ReactNode } from "react";
 
 import { cookies } from "next/headers";
@@ -19,14 +20,17 @@ import { AccountSwitcher } from "./_components/sidebar/account-switcher";
 import { LayoutControls } from "./_components/sidebar/layout-controls";
 import { SearchDialog } from "./_components/sidebar/search-dialog";
 import { ThemeSwitcher } from "./_components/sidebar/theme-switcher";
+//#endregion
 
 export default async function Layout({ children }: Readonly<{ children: ReactNode }>) {
+  //#region Layout
   const cookieStore = await cookies();
   const defaultOpen = cookieStore.get("sidebar_state")?.value !== "false";
   const [variant, collapsible] = await Promise.all([
     getPreference("sidebar_variant", SIDEBAR_VARIANT_VALUES, "inset"),
     getPreference("sidebar_collapsible", SIDEBAR_COLLAPSIBLE_VALUES, "icon"),
   ]);
+  //#endregion
 
   return (
     <SidebarProvider

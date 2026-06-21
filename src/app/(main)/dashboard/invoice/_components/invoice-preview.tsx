@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { Download, Printer } from "lucide-react";
@@ -11,8 +12,10 @@ import { INVOICE_PAPER_HEIGHT, INVOICE_PAPER_SCALE, INVOICE_PAPER_WIDTH, type In
 import { InvoicePaper } from "./invoice-paper";
 import { PrintInvoice } from "./print-invoice";
 import { useVisibleCenterPosition } from "./use-visible-center-position";
+//#endregion
 
 export function InvoicePreview({ invoice }: { invoice: InvoiceFormValues }) {
+  //#region InvoicePreview
   const previewBodyRef = React.useRef<HTMLDivElement>(null);
   const paperLayout = useVisibleCenterPosition(previewBodyRef, {
     height: INVOICE_PAPER_HEIGHT,
@@ -23,6 +26,7 @@ export function InvoicePreview({ invoice }: { invoice: InvoiceFormValues }) {
   function handlePrint() {
     window.print();
   }
+  //#endregion
 
   return (
     <>

@@ -1,3 +1,4 @@
+//#region Imports
 import { BookOpenCheck, Megaphone, Plus } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,7 @@ import { ClassSchedule } from "./_components/class-schedule";
 import { KpiCards } from "./_components/kpi-cards";
 import { PerformanceHighlights } from "./_components/performance-highlights";
 import { UpcomingEvents } from "./_components/upcoming-events";
+//#endregion
 
 export default function Page() {
   return (

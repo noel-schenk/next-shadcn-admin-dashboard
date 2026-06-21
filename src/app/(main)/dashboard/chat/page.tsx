@@ -1,8 +1,10 @@
+//#region Imports
 import Link from "next/link";
 
 import { ExternalLink } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+//#endregion
 
 export default function Page() {
   return (

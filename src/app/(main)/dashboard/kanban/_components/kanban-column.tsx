@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { SortableContext, useSortable, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import { GripVertical, MoreVertical, Plus } from "lucide-react";
 
@@ -8,6 +9,8 @@ import { cn } from "@/lib/utils";
 
 import { SortableTaskCard } from "./sortable-task-card";
 import type { Column, Task } from "./types";
+
+//#endregion
 
 interface KanbanColumnProps {
   column: Column;

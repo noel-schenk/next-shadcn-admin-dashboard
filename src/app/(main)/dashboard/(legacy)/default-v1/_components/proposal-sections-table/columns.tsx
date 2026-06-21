@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import { useSortable } from "@dnd-kit/sortable";
 import type { ColumnDef, Row } from "@tanstack/react-table";
 import { flexRender } from "@tanstack/react-table";
@@ -37,6 +38,8 @@ import { TableCell, TableRow } from "@/components/ui/table";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 import type { ProposalSectionsRow } from "./schema";
+
+//#endregion
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },

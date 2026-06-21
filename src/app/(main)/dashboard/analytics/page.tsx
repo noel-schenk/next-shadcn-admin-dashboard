@@ -1,3 +1,4 @@
+//#region Imports
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { AnalyticsKpiStrip } from "./_components/analytics-kpi-strip";
@@ -9,6 +10,7 @@ import { TrafficQuality } from "./_components/traffic-quality";
 
 // Import this stylesheet in any page or component that renders country flag classes.
 import "@/styles/flag-icons/flags.css";
+//#endregion
 
 export default function Page() {
   return (

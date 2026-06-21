@@ -1,3 +1,4 @@
+//#region Imports
 import { differenceInDays } from "date-fns/differenceInDays";
 import { format } from "date-fns/format";
 import { formatDistanceToNow } from "date-fns/formatDistanceToNow";
@@ -8,6 +9,8 @@ import { cn } from "@/lib/utils";
 
 import type { Mail } from "./data";
 import { useMail } from "./use-mail";
+
+//#endregion
 
 type MailGroup = {
   id: string;
@@ -21,7 +24,9 @@ interface MailListProps {
 }
 
 export function MailList({ groups, onSelectMail }: MailListProps) {
+  //#region MailList
   const [mail, setMail] = useMail();
+  //#endregion
 
   return (
     <ScrollArea className="min-h-0 flex-1">

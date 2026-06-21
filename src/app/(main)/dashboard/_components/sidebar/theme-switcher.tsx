@@ -1,14 +1,18 @@
 "use client";
 
+//#region Imports
 import { Monitor, Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { persistPreference } from "@/lib/preferences/preferences-storage";
 import { usePreferencesStore } from "@/stores/preferences/preferences-provider";
 
+//#endregion
+
 const THEME_CYCLE = ["light", "dark", "system"] as const;
 
 export function ThemeSwitcher() {
+  //#region ThemeSwitcher
   const themeMode = usePreferencesStore((s) => s.themeMode);
   const setThemeMode = usePreferencesStore((s) => s.setThemeMode);
 
@@ -19,6 +23,7 @@ export function ThemeSwitcher() {
     setThemeMode(nextTheme);
     void persistPreference("theme_mode", nextTheme);
   };
+  //#endregion
 
   return (
     <Button size="icon" onClick={cycleTheme} aria-label={`Current theme: ${themeMode}. Click to cycle themes`}>

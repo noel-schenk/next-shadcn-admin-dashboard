@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import type { ColumnDef } from "@tanstack/react-table";
 import { Pencil } from "lucide-react";
 
@@ -10,6 +11,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
 
 import type { OpportunityRow } from "./schema";
+
+//#endregion
 
 const healthStripSlots = Array.from({ length: 18 }, (_, index) => ({
   id: `strip-${index + 1}`,

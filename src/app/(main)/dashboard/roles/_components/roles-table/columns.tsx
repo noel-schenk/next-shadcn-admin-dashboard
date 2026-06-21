@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import type { ColumnDef } from "@tanstack/react-table";
 import { MoreVertical } from "lucide-react";
 
@@ -16,6 +17,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import type { Role } from "./data";
+//#endregion
 
 export const rolesColumns: ColumnDef<Role>[] = [
   {

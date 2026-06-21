@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { addHours, endOfToday, format, parseISO, subHours } from "date-fns";
 import { Area, CartesianGrid, ComposedChart, Line, XAxis } from "recharts";
 
@@ -22,6 +23,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
+//#endregion
 
 const chartValues = [
   { newCustomers: 23840, activeAccounts: 6630, returningUsers: 4880 },

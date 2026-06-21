@@ -1,9 +1,11 @@
+//#region Imports
 import Link from "next/link";
 
 import { Command } from "lucide-react";
 
 import { RegisterForm } from "../../_components/register-form";
 import { GoogleButton } from "../../_components/social-auth/google-button";
+//#endregion
 
 export default function RegisterV1() {
   return (

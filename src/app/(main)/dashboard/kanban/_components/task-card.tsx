@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import {
   ArrowUpRight,
   BadgeCheck,
@@ -20,6 +21,8 @@ import { cn, getInitials } from "@/lib/utils";
 
 import { tagTones } from "./data";
 import type { ColumnId, Task, TaskInsightLabel, TaskPriority } from "./types";
+
+//#endregion
 
 const taskInsightIcons: Record<TaskInsightLabel, LucideIcon> = {
   Attachments: Paperclip,
@@ -57,10 +60,12 @@ export function TaskCard({
   columnId?: ColumnId;
   isOverlay?: boolean;
 }) {
+  //#region TaskCard
   const isDone = columnId === "shipped";
   const showBuildingDetails = columnId === "building" && typeof task.progress === "number";
   const owner = task.owner;
   const PriorityIcon = priorityBadgeConfig[task.priority].icon;
+  //#endregion
 
   return (
     <article

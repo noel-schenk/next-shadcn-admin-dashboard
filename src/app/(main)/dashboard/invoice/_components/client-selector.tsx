@@ -1,3 +1,4 @@
+//#region Imports
 import { Plus } from "lucide-react";
 import { Controller, useFormContext } from "react-hook-form";
 
@@ -8,6 +9,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectVa
 import { getInitials } from "@/lib/utils";
 
 import { type InvoiceFormValues, invoiceClients } from "./data";
+//#endregion
 
 export function ClientSelector() {
   const { control } = useFormContext<InvoiceFormValues>();

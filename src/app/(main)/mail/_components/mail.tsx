@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { Drawer, DrawerContent, DrawerDescription, DrawerTitle } from "@/components/ui/drawer";
@@ -18,12 +19,15 @@ import {
 import { MailView } from "./mail-view";
 import { useMail } from "./use-mail";
 
+//#endregion
+
 interface MailProps {
   mails: Mail[];
   defaultLayout: number[] | undefined;
 }
 
 export function MailComponent({ mails, defaultLayout = [...DEFAULT_MAIL_LAYOUT] }: MailProps) {
+  //#region MailComponent
   const { isMobile } = useSidebar();
   const [isMounted, setIsMounted] = React.useState(false);
 
@@ -36,6 +40,7 @@ export function MailComponent({ mails, defaultLayout = [...DEFAULT_MAIL_LAYOUT] 
       <div className="flex size-full items-center justify-center text-muted-foreground text-sm">Loading mail...</div>
     );
   }
+  //#endregion
 
   return isMobile ? (
     <MailMobileLayout mails={mails} />

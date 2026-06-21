@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { CircleUser, CreditCard, EllipsisVertical, LogOut, MessageSquareDot } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -14,6 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@/components/ui/sidebar";
 import { getInitials } from "@/lib/utils";
+//#endregion
 
 export function NavUser({
   user,
@@ -24,7 +26,9 @@ export function NavUser({
     readonly avatar: string;
   };
 }) {
+  //#region NavUser
   const { isMobile } = useSidebar();
+  //#endregion
 
   return (
     <SidebarMenu>

@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { startOfMonth, startOfToday } from "date-fns";
@@ -7,11 +8,14 @@ import { enGB } from "date-fns/locale";
 
 import { Calendar } from "@/components/ui/calendar";
 import { Card, CardContent } from "@/components/ui/card";
+//#endregion
 
 export function CalendarPanel() {
+  //#region CalendarPanel
   const today = startOfToday();
   const [date, setDate] = React.useState<Date | undefined>(today);
   const [currentMonth, setCurrentMonth] = React.useState<Date>(startOfMonth(today));
+  //#endregion
 
   return (
     <Card className="w-full" size="sm">
