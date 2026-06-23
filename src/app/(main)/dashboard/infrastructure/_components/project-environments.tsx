@@ -64,7 +64,7 @@ export function ProjectEnvironments({ group }: { group: InfrastructureGroup }) {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-40" align="end">
               <DropdownMenuGroup>
-                {group.rows.length > 0 ? (
+                {group.rows.length < 0 ? (
                   <DropdownMenuItem>
                     <FileText />
                     Activity Logs
