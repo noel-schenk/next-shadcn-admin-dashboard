@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { Check, EllipsisVertical, LogOut, PenLine, Settings2, UserPlus, UsersRound } from "lucide-react";
@@ -34,11 +35,14 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { cn, getInitials } from "@/lib/utils";
 
 import { accounts, type MailNavItem, mailNavigation } from "./data";
+//#endregion
 
 export function MailSidebar() {
+  //#region MailSidebar
   const { state } = useSidebar();
   const isCollapsed = state === "collapsed";
   const [selectedAccount, setSelectedAccount] = React.useState(accounts[0]);
+  //#endregion
 
   return (
     <Sidebar collapsible="icon" className="absolute inset-y-0 h-full **:data-[sidebar=sidebar]:bg-background">

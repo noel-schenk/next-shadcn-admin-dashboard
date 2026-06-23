@@ -1,3 +1,4 @@
+//#region Imports
 import type { ReactNode } from "react";
 
 import type { Metadata } from "next";
@@ -11,6 +12,7 @@ import { ThemeBootScript } from "@/scripts/theme-boot";
 import { PreferencesStoreProvider } from "@/stores/preferences/preferences-provider";
 
 import "./globals.css";
+//#endregion
 
 export const metadata: Metadata = {
   title: APP_CONFIG.meta.title,
@@ -18,8 +20,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+  //#region RootLayout
   const { theme_mode, theme_preset, content_layout, navbar_style, sidebar_variant, sidebar_collapsible, font } =
     PREFERENCE_DEFAULTS;
+  //#endregion
   return (
     <html
       lang="en"

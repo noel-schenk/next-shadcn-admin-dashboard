@@ -1,5 +1,7 @@
+//#region Imports
 import type { LucideIcon } from "lucide-react";
 import { BriefcaseBusiness, ShieldCheck, SquareUserRound, UserCog, UserRound } from "lucide-react";
+//#endregion
 
 export type UserStatus = "Active" | "Pending invite" | "Deactivated" | "Locked" | "Suspended";
 

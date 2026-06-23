@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { type CSSProperties, useState } from "react";
 
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
@@ -13,11 +14,14 @@ import { ChatThread } from "./chat-thread";
 import type { Conversation } from "./data";
 import { useChat } from "./use-chat";
 
+//#endregion
+
 interface ChatProps {
   conversations: Conversation[];
 }
 
 export function Chat({ conversations }: ChatProps) {
+  //#region Chat
   const [chat] = useChat();
   const [showContact, setShowContact] = useState(false);
   const [showThread, setShowThread] = useState(false);
@@ -25,6 +29,7 @@ export function Chat({ conversations }: ChatProps) {
   const isMobile = useIsMobile();
 
   const activeConversation = conversations.find((c) => c.id === chat.selected) ?? conversations[0];
+  //#endregion
 
   return (
     <>

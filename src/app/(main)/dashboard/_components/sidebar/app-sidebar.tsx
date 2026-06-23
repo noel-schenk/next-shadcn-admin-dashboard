@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import Link from "next/link";
 
 import { CircleHelp, ClipboardList, Command, Database, File, Search, Settings } from "lucide-react";
@@ -22,6 +23,8 @@ import { usePreferencesStore } from "@/stores/preferences/preferences-provider";
 import { NavMain } from "./nav-main";
 import { NavUser } from "./nav-user";
 import { SidebarSupportCard } from "./sidebar-support-card";
+
+//#endregion
 
 const _data = {
   navSecondary: [
@@ -61,6 +64,7 @@ const _data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  //#region AppSidebar
   const { sidebarVariant, sidebarCollapsible, isSynced } = usePreferencesStore(
     useShallow((s) => ({
       sidebarVariant: s.sidebarVariant,
@@ -71,6 +75,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   const variant = isSynced ? sidebarVariant : props.variant;
   const collapsible = isSynced ? sidebarCollapsible : props.collapsible;
+  //#endregion
 
   return (
     <Sidebar {...props} variant={variant} collapsible={collapsible}>

@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 import { type StoreApi, useStore } from "zustand";
@@ -15,6 +16,8 @@ import { THEME_MODE_VALUES, THEME_PRESET_VALUES } from "@/lib/preferences/theme"
 import { applyThemeMode, subscribeToSystemTheme } from "@/lib/preferences/theme-utils";
 
 import { createPreferencesStore, type PreferencesState } from "./preferences-store";
+
+//#endregion
 
 const PreferencesStoreContext = createContext<StoreApi<PreferencesState> | null>(null);
 
@@ -58,6 +61,7 @@ export const PreferencesStoreProvider = ({
   contentLayout: PreferencesState["contentLayout"];
   navbarStyle: PreferencesState["navbarStyle"];
 }) => {
+  //#region PreferencesStoreProvider
   const [store] = useState<StoreApi<PreferencesState>>(() =>
     createPreferencesStore({
       themeMode,
@@ -109,6 +113,7 @@ export const PreferencesStoreProvider = ({
       unsubscribeStore();
     };
   }, [store]);
+  //#endregion
 
   return <PreferencesStoreContext.Provider value={store}>{children}</PreferencesStoreContext.Provider>;
 };

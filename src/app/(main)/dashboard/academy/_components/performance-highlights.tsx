@@ -1,11 +1,14 @@
 "use client";
 
+//#region Imports
 import { ArrowRight } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { type ChartConfig, ChartContainer } from "@/components/ui/chart";
+
+//#endregion
 
 const performanceHighlights = [
   {
@@ -64,6 +67,7 @@ function PerformanceHighlightBar({
   x?: number;
   y?: number;
 }) {
+  //#region PerformanceHighlightBar
   if (!payload) {
     return null;
   }
@@ -76,6 +80,7 @@ function PerformanceHighlightBar({
   const avatarStart = x + 8;
   const avatarY = barY + (barHeight - avatarSize) / 2 - 1.5;
   const labelX = avatarStart + payload.avatars.length * 14 + 14;
+  //#endregion
 
   return (
     <g>

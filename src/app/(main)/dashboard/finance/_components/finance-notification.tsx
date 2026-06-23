@@ -1,7 +1,9 @@
+//#region Imports
 import { TrendingUp } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "@/components/ui/item";
+//#endregion
 
 export function FinanceNotification() {
   return (

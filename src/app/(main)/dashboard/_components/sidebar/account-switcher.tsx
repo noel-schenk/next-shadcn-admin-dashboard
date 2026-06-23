@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { useState } from "react";
 
 import { BadgeCheck, Bell, Check, CreditCard, LogOut } from "lucide-react";
@@ -14,6 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn, getInitials } from "@/lib/utils";
+//#endregion
 
 export function AccountSwitcher({
   users,

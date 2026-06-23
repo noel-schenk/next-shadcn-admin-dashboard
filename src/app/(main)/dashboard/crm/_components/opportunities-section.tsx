@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import * as React from "react";
 
 import {
@@ -40,6 +41,8 @@ import { opportunitiesColumns } from "./opportunities-table/columns";
 import opportunitiesData from "./opportunities-table/data.json";
 import { opportunitiesSchema } from "./opportunities-table/schema";
 
+//#endregion
+
 const stageOptions = ["all", "Proposal Sent", "Discovery", "Negotiation", "Qualified"] as const;
 const healthOptions = ["all", "On Track", "Needs Review", "At Risk", "On Hold"] as const;
 const opportunities = opportunitiesSchema.parse(opportunitiesData);
@@ -49,6 +52,7 @@ function preventPaginationNavigation(event: React.MouseEvent<HTMLAnchorElement>)
 }
 
 export function OpportunitiesSection() {
+  //#region OpportunitiesSection
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
   const [columnVisibility] = React.useState<VisibilityState>({});
@@ -96,6 +100,7 @@ export function OpportunitiesSection() {
 
     return [currentPage - 1, currentPage, currentPage + 1];
   }, [currentPage, pageCount]);
+  //#endregion
 
   return (
     <section>

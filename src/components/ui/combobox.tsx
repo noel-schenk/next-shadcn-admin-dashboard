@@ -1,5 +1,6 @@
 "use client"
 
+//#region Imports
 import * as React from "react"
 import { Combobox as ComboboxPrimitive } from "@base-ui/react"
 
@@ -12,6 +13,7 @@ import {
   InputGroupInput,
 } from "@/components/ui/input-group"
 import { ChevronDownIcon, XIcon, CheckIcon } from "lucide-react"
+//#endregion
 
 const Combobox = ComboboxPrimitive.Root
 

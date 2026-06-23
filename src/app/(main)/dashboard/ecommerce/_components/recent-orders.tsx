@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import * as React from "react";
 
 import {
@@ -39,9 +40,12 @@ import {
 } from "./recent-orders-table/formatters";
 import { type OrderFilter, type OrderRow, orderFilters } from "./recent-orders-table/schema";
 
+//#endregion
+
 const recentOrders = recentOrdersData as OrderRow[];
 
 export function RecentOrders() {
+  //#region RecentOrders
   const [rowSelection, setRowSelection] = React.useState({});
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
@@ -89,6 +93,7 @@ export function RecentOrders() {
 
     return [currentPage - 1, currentPage, currentPage + 1];
   }, [currentPage, pageCount]);
+  //#endregion
 
   return (
     <Card>

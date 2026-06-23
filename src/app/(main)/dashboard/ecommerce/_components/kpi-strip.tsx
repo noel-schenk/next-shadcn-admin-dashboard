@@ -1,11 +1,14 @@
 "use client";
 
+//#region Imports
 import { format, parse } from "date-fns";
 import { ArrowUpRight, DollarSign, PackageCheck, ReceiptText, RotateCcw, ShoppingBag, Users } from "lucide-react";
 import { Area, Bar, CartesianGrid, ComposedChart, XAxis, YAxis } from "recharts";
 
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+
+//#endregion
 
 const revenueBucketRanges = ["01-05", "06-10", "11-15", "16-20", "21-25", "26-31"] as const;
 

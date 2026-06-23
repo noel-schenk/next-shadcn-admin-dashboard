@@ -1,11 +1,13 @@
 "use client";
 
+//#region Imports
 import { useSortable } from "@dnd-kit/sortable";
 
 import { cn } from "@/lib/utils";
 
 import { TaskCard } from "./task-card";
 import type { ColumnId, Task } from "./types";
+//#endregion
 
 export function SortableTaskCard({ task, columnId }: { task: Task; columnId: ColumnId }) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({

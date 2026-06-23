@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { format } from "date-fns/format";
 import {
   Archive,
@@ -40,18 +41,22 @@ import { cn } from "@/lib/utils";
 import type { Mail } from "./data";
 import { useMail } from "./use-mail";
 
+//#endregion
+
 interface MailDisplayProps {
   mail: Mail | null;
   onClose?: () => void;
 }
 
 export function MailView({ mail, onClose }: MailDisplayProps) {
+  //#region MailView
   const [, setMail] = useMail();
 
   function handleClose() {
     setMail({ selected: null });
     onClose?.();
   }
+  //#endregion
 
   return (
     <div className="flex h-full min-h-0 flex-col gap-3 px-2 py-3">

@@ -1,3 +1,4 @@
+//#region Imports
 import { Ellipsis, FileDown, FileUp, RefreshCw, Share2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+//#endregion
 
 export function AnalyticsToolbar() {
   return (

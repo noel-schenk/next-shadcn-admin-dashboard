@@ -1,10 +1,13 @@
 "use client";
 
+//#region Imports
 import type * as React from "react";
 
 import type { SimpleIcon as SimpleIconType } from "simple-icons";
 
 import { cn } from "@/lib/utils";
+
+//#endregion
 
 type SimpleIconProps = {
   icon: SimpleIconType;

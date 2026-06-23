@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -35,6 +36,8 @@ import type {
   NavMainLinkItem,
   NavMainParentItem,
 } from "@/navigation/sidebar/sidebar-items";
+
+//#endregion
 
 interface NavMainProps {
   readonly items: readonly NavGroup[];
@@ -78,6 +81,7 @@ function hasSubItems(item: NavMainItem): item is NavMainParentItem {
 }
 
 export function NavMain({ items }: NavMainProps) {
+  //#region NavMain
   const path = usePathname();
 
   const isItemActive = (item: NavMainItem) => {
@@ -95,6 +99,7 @@ export function NavMain({ items }: NavMainProps) {
   const isSubmenuOpen = (item: NavMainParentItem) => {
     return item.subItems.some((sub) => path.startsWith(sub.url));
   };
+  //#endregion
 
   return (
     <>

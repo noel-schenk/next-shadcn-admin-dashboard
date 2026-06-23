@@ -1,4 +1,6 @@
+//#region Imports
 import { cn } from "@/lib/utils"
+//#endregion
 
 function Skeleton({ className, ...props }: React.ComponentProps<"div">) {
   return (

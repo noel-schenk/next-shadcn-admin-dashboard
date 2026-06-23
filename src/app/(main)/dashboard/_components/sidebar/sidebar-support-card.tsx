@@ -1,9 +1,11 @@
 import Link from "next/link";
 
+//#region Imports
 import { siX } from "simple-icons";
 
 import { SimpleIcon } from "@/components/simple-icon";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+//#endregion
 
 export function SidebarSupportCard() {
   return (

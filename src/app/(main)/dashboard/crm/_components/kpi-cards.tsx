@@ -1,7 +1,9 @@
+//#region Imports
 import { ArrowUpRight, TrendingDown, TrendingUp } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardAction, CardContent, CardDescription, CardHeader } from "@/components/ui/card";
+//#endregion
 
 export function KpiCards() {
   return (

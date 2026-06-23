@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import {
@@ -52,11 +53,14 @@ import { TaskCard } from "./task-card";
 import type { BoardState, ColumnId, Task } from "./types";
 import { findColumnId, findTask } from "./utils";
 
+//#endregion
+
 interface KanbanProps {
   initialBoard: BoardState;
 }
 
 export function Kanban({ initialBoard }: KanbanProps) {
+  //#region Kanban
   const [board, setBoard] = React.useState<BoardState>(initialBoard);
   const [columnOrder, setColumnOrder] = React.useState<ColumnId[]>(columnIds);
   const [activeTask, setActiveTask] = React.useState<Task | null>(null);
@@ -169,6 +173,7 @@ export function Kanban({ initialBoard }: KanbanProps) {
       };
     });
   }
+  //#endregion
 
   return (
     <div className="flex h-[calc(100dvh-var(--dashboard-header-height))] min-h-0 min-w-0 flex-col overflow-hidden">

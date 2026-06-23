@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { Label, Pie, PieChart } from "recharts";
@@ -8,6 +9,8 @@ import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/componen
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { formatCurrency } from "@/lib/utils";
+
+//#endregion
 
 type BalanceKey = "investment" | "main" | "reserve" | "savings";
 
@@ -91,8 +94,10 @@ const chartData = balanceData.map((item) => ({
 }));
 
 export function BalanceDistributionCard() {
+  //#region BalanceDistributionCard
   const [currency, setCurrency] = React.useState<Currency>("USD");
   const totalBalance = React.useMemo(() => balanceData.reduce((total, item) => total + item.amount, 0), []);
+  //#endregion
 
   return (
     <Card>

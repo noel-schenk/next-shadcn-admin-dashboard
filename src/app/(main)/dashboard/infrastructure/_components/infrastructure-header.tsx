@@ -1,9 +1,11 @@
+//#region Imports
 import { Box, Container, Filter, PlusCircle, RefreshCw, Search, Server, Settings } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 import { Kbd } from "@/components/ui/kbd";
+//#endregion
 
 export function InfrastructureHeader() {
   return (

@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { ArrowUpRight } from "lucide-react";
 import { Bar, BarChart, LabelList, type LabelProps, XAxis, YAxis } from "recharts";
 import { siEbay, siGoogle, siMeta, siShopify, siTiktok } from "simple-icons";
@@ -7,6 +8,8 @@ import { siEbay, siGoogle, siMeta, siShopify, siTiktok } from "simple-icons";
 import { SimpleIcon } from "@/components/simple-icon";
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { type ChartConfig, ChartContainer } from "@/components/ui/chart";
+
+//#endregion
 
 const trafficSources = [
   {

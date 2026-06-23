@@ -1,11 +1,14 @@
 "use client";
 
+//#region Imports
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { formatCurrency } from "@/lib/utils";
+
+//#endregion
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 const weekStart = Date.UTC(2026, 0, 5);

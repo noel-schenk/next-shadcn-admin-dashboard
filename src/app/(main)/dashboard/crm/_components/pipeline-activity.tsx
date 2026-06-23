@@ -1,11 +1,14 @@
 "use client";
 
+//#region Imports
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { Progress } from "@/components/ui/progress";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+//#endregion
 
 const pipelineChartValues = [34, 38, 31, 47, 42, 51, 44, 40, 58, 46, 43, 49] as const;
 
@@ -32,10 +35,12 @@ function getRollingMonthData(values: readonly number[]) {
 }
 
 export function PipelineActivity() {
+  //#region PipelineActivity
   const pipelineChartData = getRollingMonthData(pipelineChartValues);
   const totalQualified = pipelineChartData.reduce((sum, item) => sum + item.qualified, 0);
   const discoveryCallsBooked = 184;
   const discoveryProgress = Math.round((discoveryCallsBooked / totalQualified) * 100);
+  //#endregion
 
   return (
     <div className="grid grid-cols-1 gap-4 xl:grid-cols-12">

@@ -1,3 +1,4 @@
+//#region Imports
 import {
   ArrowUpDown,
   Bell,
@@ -31,6 +32,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { cn } from "@/lib/utils";
 
 import type { InfrastructureEnvironment, InfrastructureGroup } from "./infrastructure-data";
+//#endregion
 
 export function ProjectEnvironments({ group }: { group: InfrastructureGroup }) {
   return (
@@ -253,6 +255,7 @@ function EnvironmentTable({ rows }: { rows: InfrastructureEnvironment[] }) {
 }
 
 function ResourceMeter({ label, value }: { label: string; value: number }) {
+  //#region ResourceMeter
   const isCritical = value >= 70;
   const isWarning = value >= 55;
   const meterClass = isCritical ? "bg-destructive" : isWarning ? "bg-amber-500" : "bg-emerald-500";
@@ -261,6 +264,7 @@ function ResourceMeter({ label, value }: { label: string; value: number }) {
     : isWarning
       ? "text-amber-600 dark:text-amber-400"
       : "text-emerald-600 dark:text-emerald-400";
+  //#endregion
 
   return (
     <span className="min-w-0 space-y-1">

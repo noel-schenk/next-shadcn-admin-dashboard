@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import * as React from "react";
 
 import {
@@ -57,6 +58,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DraggableProposalSectionsRow, proposalSectionsColumns } from "./columns";
 import type { ProposalSectionsRow } from "./schema";
 
+//#endregion
+
 const VIEW_OPTIONS = [
   { value: "outline", label: "Outline" },
   { value: "past-performance", label: "Past Performance" },
@@ -66,6 +69,7 @@ const VIEW_OPTIONS = [
 
 type ViewOption = (typeof VIEW_OPTIONS)[number]["value"];
 export function ProposalSectionsTable({ data: initialData }: { data: ProposalSectionsRow[] }) {
+  //#region ProposalSectionsTable
   const [data, setData] = React.useState(() => initialData);
   const [activeView, setActiveView] = React.useState<ViewOption>("outline");
   const [rowSelection, setRowSelection] = React.useState({});
@@ -117,6 +121,7 @@ export function ProposalSectionsTable({ data: initialData }: { data: ProposalSec
       });
     }
   }
+  //#endregion
 
   return (
     <Tabs

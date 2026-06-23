@@ -1,9 +1,11 @@
+//#region Imports
 import type { ReactNode } from "react";
 
 import { SidebarProvider } from "@/components/ui/sidebar";
 
 import { ChatHeader } from "./_components/chat-header";
 import { ChatSidebar } from "./_components/chat-sidebar";
+//#endregion
 
 export default async function Layout({ children }: Readonly<{ children: ReactNode }>) {
   return (

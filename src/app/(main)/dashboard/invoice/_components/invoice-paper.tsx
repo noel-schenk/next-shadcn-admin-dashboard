@@ -1,3 +1,4 @@
+//#region Imports
 import { formatCurrency } from "@/lib/utils";
 
 import {
@@ -12,11 +13,14 @@ import {
   INVOICE_PAPER_WIDTH,
   type InvoiceFormValues,
 } from "./data";
+//#endregion
 
 export function InvoicePaper({ invoice }: { invoice: InvoiceFormValues }) {
+  //#region InvoicePaper
   const taxOption = getInvoiceTaxOption(invoice);
   const discountValue = Number.isFinite(invoice.discountValue) ? invoice.discountValue : 0;
   const discountLabel = invoice.discountType === "percent" ? `Discount ${discountValue}%` : "Discount";
+  //#endregion
 
   return (
     <article

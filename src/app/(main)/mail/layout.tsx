@@ -1,8 +1,10 @@
+//#region Imports
 import type { ReactNode } from "react";
 
 import { SidebarProvider } from "@/components/ui/sidebar";
 
 import { MailSidebar } from "./_components/mail-sidebar";
+//#endregion
 
 export default async function Layout({ children }: Readonly<{ children: ReactNode }>) {
   return (

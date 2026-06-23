@@ -1,8 +1,11 @@
+//#region Imports
 import { ArrowLeft, ArrowRight, ArrowUpRight, Star } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarGroup, AvatarGroupCount } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+//#endregion
 
 const customerInitials = ["EM", "OW", "NO", "MM"] as const;
 

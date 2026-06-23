@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { useMemo } from "react";
 
 import { format, subMinutes } from "date-fns";
@@ -15,6 +16,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+
+//#endregion
 
 const trafficIntervalMinutes = 15;
 
@@ -142,6 +145,7 @@ function formatTrafficTooltipLabel(value: string) {
 }
 
 export function StoreTraffic() {
+  //#region StoreTraffic
   const trafficData = useMemo(getTrafficData, []);
   const firstTrafficTimestamp = trafficData[0].timestamp;
   const lastTrafficTimestamp = trafficData.at(-1)?.timestamp ?? "";
@@ -153,6 +157,7 @@ export function StoreTraffic() {
 
     return value === lastTrafficTimestamp ? "now" : "";
   }
+  //#endregion
 
   return (
     <Card>

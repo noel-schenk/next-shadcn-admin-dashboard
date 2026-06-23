@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import * as React from "react";
 
 import {
@@ -41,6 +42,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { recentLeadsColumns } from "./columns";
 import type { RecentLeadRow } from "./schema";
 
+//#endregion
+
 const COLUMN_LABELS: Record<string, string> = {
   id: "Ref",
   name: "Name",
@@ -51,6 +54,7 @@ const COLUMN_LABELS: Record<string, string> = {
 };
 
 export function RecentLeadsTable({ data }: { data: RecentLeadRow[] }) {
+  //#region RecentLeadsTable
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
@@ -78,6 +82,7 @@ export function RecentLeadsTable({ data }: { data: RecentLeadRow[] }) {
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   });
+  //#endregion
 
   return (
     <Card>

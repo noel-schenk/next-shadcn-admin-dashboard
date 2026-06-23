@@ -1,3 +1,4 @@
+//#region Imports
 import { Controller, useFormContext, useWatch } from "react-hook-form";
 
 import { Field, FieldLabel } from "@/components/ui/field";
@@ -5,10 +6,13 @@ import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/in
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 import { type InvoiceFormValues, invoiceTaxOptions } from "./data";
+//#endregion
 
 export function InvoiceAdjustments() {
+  //#region InvoiceAdjustments
   const { control, register } = useFormContext<InvoiceFormValues>();
   const discountType = useWatch({ control, name: "discountType" });
+  //#endregion
 
   return (
     <section className="flex flex-col gap-4">

@@ -1,8 +1,10 @@
+//#region Imports
 import { siGoogle } from "simple-icons";
 
 import { SimpleIcon } from "@/components/simple-icon";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+//#endregion
 
 export function GoogleButton({ className, ...props }: React.ComponentProps<typeof Button>) {
   return (

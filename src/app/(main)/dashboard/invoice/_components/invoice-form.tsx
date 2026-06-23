@@ -1,3 +1,4 @@
+//#region Imports
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -5,6 +6,7 @@ import { ClientSelector } from "./client-selector";
 import { InvoiceAdjustments } from "./invoice-adjustments";
 import { InvoiceDetails } from "./invoice-details";
 import { InvoiceItems } from "./invoice-items";
+//#endregion
 
 export function InvoiceForm() {
   return (

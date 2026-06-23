@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import { useState } from "react";
 
 import {
@@ -22,8 +23,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { rolesColumns } from "./roles-table/columns";
 import type { Role } from "./roles-table/data";
 import { RolesTable } from "./roles-table/table";
+//#endregion
 
 export function Roles({ roles }: { roles: Role[] }) {
+  //#region Roles
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
@@ -55,6 +58,7 @@ export function Roles({ roles }: { roles: Role[] }) {
   const typeFilter = groupFilter === "System roles" ? "System" : groupFilter === "Custom roles" ? "Custom" : "All";
   const ownerFilter = (table.getColumn("owner")?.getFilterValue() as string) ?? "All";
   const statusFilter = (table.getColumn("status")?.getFilterValue() as string) ?? "All";
+  //#endregion
 
   return (
     <div className="flex h-full flex-col gap-4">

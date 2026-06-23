@@ -1,6 +1,7 @@
 "use client";
 "use no memo";
 
+//#region Imports
 import type { ColumnDef } from "@tanstack/react-table";
 import { parse } from "date-fns";
 import { Check, Clock, MoreHorizontal, X } from "lucide-react";
@@ -19,6 +20,8 @@ import {
 import { cn, getInitials } from "@/lib/utils";
 
 import { statusMeta, type UserRow } from "./data";
+
+//#endregion
 
 function RoleCell({ role, team }: { role: string; team: string }) {
   return (

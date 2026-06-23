@@ -1,10 +1,13 @@
 "use client";
 
+//#region Imports
 import { Ellipsis } from "lucide-react";
 import { Bar, BarChart, type BarShapeProps, XAxis, YAxis } from "recharts";
 
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+
+//#endregion
 
 const realtimeData = [
   { minute: 1, visitors: 0 },

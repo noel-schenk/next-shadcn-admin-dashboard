@@ -1,11 +1,13 @@
 "use client"
 
+//#region Imports
 import { useMemo } from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
+//#endregion
 
 function FieldSet({ className, ...props }: React.ComponentProps<"fieldset">) {
   return (
@@ -181,6 +183,7 @@ function FieldError({
 }: React.ComponentProps<"div"> & {
   errors?: Array<{ message?: string } | undefined>
 }) {
+  //#region FieldError
   const content = useMemo(() => {
     if (children) {
       return children
@@ -211,6 +214,7 @@ function FieldError({
   if (!content) {
     return null
   }
+  //#endregion
 
   return (
     <div

@@ -1,8 +1,10 @@
 "use client";
 
+//#region Imports
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+//#endregion
 
 export default function NotFound() {
   return (

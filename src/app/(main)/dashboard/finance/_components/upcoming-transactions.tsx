@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { addDays, format, set } from "date-fns";
 import { ChevronRight, Zap } from "lucide-react";
 import { siClaude, siLinear, siResend } from "simple-icons";
@@ -7,6 +8,8 @@ import { siClaude, siLinear, siResend } from "simple-icons";
 import { SimpleIcon } from "@/components/simple-icon";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Item, ItemActions, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
+
+//#endregion
 
 const transactions = [
   {

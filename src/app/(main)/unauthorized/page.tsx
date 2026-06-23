@@ -1,6 +1,8 @@
+//#region Imports
 import Link from "next/link";
 
 import { Lock } from "lucide-react";
+//#endregion
 
 export default function page() {
   return (

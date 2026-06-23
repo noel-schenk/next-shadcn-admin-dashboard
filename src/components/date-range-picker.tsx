@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { format, subDays } from "date-fns";
@@ -9,12 +10,15 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
+//#endregion
+
 interface DateRangePickerProps {
   value?: DateRange;
   onChange?: (value: DateRange | undefined) => void;
 }
 
 export function DateRangePicker({ value, onChange }: DateRangePickerProps) {
+  //#region DateRangePicker
   const [open, setOpen] = React.useState(false);
   const [internalDateRange, setInternalDateRange] = React.useState<DateRange | undefined>(() => {
     const to = new Date();
@@ -29,7 +33,7 @@ export function DateRangePicker({ value, onChange }: DateRangePickerProps) {
     }
     onChange?.(nextValue);
   };
-
+  //#endregion
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>

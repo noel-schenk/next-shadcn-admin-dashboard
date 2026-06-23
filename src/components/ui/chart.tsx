@@ -1,10 +1,12 @@
 "use client"
 
+//#region Imports
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
 import type { TooltipValueType } from "recharts"
 
 import { cn } from "@/lib/utils"
+//#endregion
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
@@ -40,26 +42,28 @@ function useChart() {
 }
 
 function ChartContainer({
-  id,
-  className,
-  children,
-  config,
-  initialDimension = INITIAL_DIMENSION,
-  ...props
-}: React.ComponentProps<"div"> & {
-  config: ChartConfig
-  children: React.ComponentProps<
-    typeof RechartsPrimitive.ResponsiveContainer
-  >["children"]
-  initialDimension?: {
-    width: number
-    height: number
-  }
-}) {
-  const uniqueId = React.useId()
-  const chartId = `chart-${id ?? uniqueId.replace(/:/g, "")}`
+   id,
+   className,
+   children,
+   config,
+   initialDimension = INITIAL_DIMENSION,
+   ...props
+ }: React.ComponentProps<"div"> & {
+   config: ChartConfig
+   children: React.ComponentProps<
+     typeof RechartsPrimitive.ResponsiveContainer
+   >["children"]
+   initialDimension?: {
+     width: number
+     height: number
+   }
+ }) {
+   //#region ChartContainer
+   const uniqueId = React.useId()
+   const chartId = `chart-${id ?? uniqueId.replace(/:/g, "")}`
+   //#endregion
 
-  return (
+   return (
     <ChartContext.Provider value={{ config }}>
       <div
         data-slot="chart"

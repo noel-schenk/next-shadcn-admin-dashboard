@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { addDays, format } from "date-fns";
 import { Home, Receipt, Sparkles, Zap } from "lucide-react";
 import { siApple, siMastercard } from "simple-icons";
@@ -9,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { formatCurrency } from "@/lib/utils";
+
+//#endregion
 
 const now = new Date();
 

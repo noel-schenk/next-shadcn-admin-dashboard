@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { Bar, BarChart, CartesianGrid, Label, LabelList, Pie, PieChart, XAxis, YAxis } from "recharts";
 
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,7 @@ import {
   projectRevenueChartConfig,
   projectRevenueChartData,
 } from "./crm.config";
+//#endregion
 
 export function InsightCards() {
   const totalLeads = leadsBySourceChartData.reduce((acc, curr) => acc + curr.leads, 0);

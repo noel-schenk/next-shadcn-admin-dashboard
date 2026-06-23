@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { Ellipsis, RotateCcw, Search, SlidersHorizontal } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -10,14 +11,18 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 import type { Mail } from "./data";
 import { MailList } from "./mail-list";
 
+//#endregion
+
 interface MailInboxProps {
   mails: Mail[];
   onSelectMail?: (mail: Mail) => void;
 }
 
 export function MailInbox({ mails, onSelectMail }: MailInboxProps) {
+  //#region MailInbox
   const pinnedMails = mails.filter((mail) => mail.isPinned);
   const unpinnedMails = mails.filter((mail) => !mail.isPinned);
+  //#endregion
 
   return (
     <div className="flex h-full min-h-0 flex-col gap-3 py-3">

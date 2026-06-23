@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { ArrowRight } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
@@ -13,6 +14,9 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
+//#endregion
+
+//#region chartData
 const chartData = [
   { className: "G11A", submitted: 14, pending: 18, overdue: 2 },
   { className: "G11B", submitted: 22, pending: 7, overdue: 3 },
@@ -20,6 +24,7 @@ const chartData = [
   { className: "G11D", submitted: 17, pending: 15, overdue: 6 },
   { className: "G11E", submitted: 24, pending: 4, overdue: 2 },
 ];
+//#endregion
 
 function SubmittedLegendIcon() {
   return <span className="block size-2 rounded-[2px] bg-chart-3" />;
@@ -33,6 +38,7 @@ function OverdueLegendIcon() {
   return <span className="block size-2 rounded-[2px] bg-destructive" />;
 }
 
+//#region chartConfig
 const chartConfig = {
   submitted: {
     label: "Submitted",
@@ -50,6 +56,7 @@ const chartConfig = {
     icon: OverdueLegendIcon,
   },
 } satisfies ChartConfig;
+//#endregion
 
 function AssignmentDotPattern({ color, id }: { color: string; id: string }) {
   return (

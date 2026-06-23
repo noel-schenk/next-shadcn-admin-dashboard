@@ -1,3 +1,4 @@
+//#region Imports
 import {
   closestCenter,
   DndContext,
@@ -23,8 +24,10 @@ import { Input } from "@/components/ui/input";
 import { cn, formatCurrency } from "@/lib/utils";
 
 import { getLineAmount, type InvoiceFormValues, type InvoiceLineItem } from "./data";
+//#endregion
 
 export function InvoiceItems() {
+  //#region InvoiceItems
   const { control, register } = useFormContext<InvoiceFormValues>();
   const { append, fields, move, remove } = useFieldArray({
     control,
@@ -52,6 +55,7 @@ export function InvoiceItems() {
   function handleAddItem() {
     append({ id: `item-${Date.now()}`, description: "", quantity: 1, unitPrice: 0 });
   }
+  //#endregion
 
   return (
     <section className="flex flex-col gap-4">

@@ -1,3 +1,4 @@
+//#region Imports
 import { format } from "date-fns";
 import { Settings2 } from "lucide-react";
 
@@ -12,9 +13,12 @@ import { RecentOrders } from "./_components/recent-orders";
 import { StoreTraffic } from "./_components/store-traffic";
 import { TopProducts } from "./_components/top-products";
 import { TrafficSources } from "./_components/traffic-sources";
+//#endregion
 
 export default function Page() {
+  //#region Page
   const formattedDate = format(new Date(), "EEEE, do MMMM yyyy");
+  //#endregion
 
   return (
     <div className="flex flex-col gap-4">

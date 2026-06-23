@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import {
   Building2,
   Calendar,
@@ -25,6 +26,8 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getInitials } from "@/lib/utils";
 
 import type { Contact } from "./data";
+
+//#endregion
 
 interface ChatProfileDetailsProps {
   contact: Contact;

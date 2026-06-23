@@ -1,7 +1,9 @@
+//#region Imports
 import { ChartAreaInteractive } from "./_components/chart-area-interactive";
 import data from "./_components/data.json";
 import { ProposalSectionsTable } from "./_components/proposal-sections-table/table";
 import { SectionCards } from "./_components/section-cards";
+//#endregion
 
 export default function Page() {
   return (

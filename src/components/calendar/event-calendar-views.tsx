@@ -1,7 +1,10 @@
+//#region Imports
 import FullCalendar, { type CalendarOptions, type DayCellInfo } from '@fullcalendar/react'
 import '@fullcalendar/react/skeleton.css'
 import { cn } from '@/lib/utils'
+//#endregion
 
+//#region EventCalendarViews
 const xxsTextClass = 'text-[0.6875rem]/[1.090909]'
 
 const blockPointerResizerClass = 'absolute hidden group-hover:block'
@@ -495,3 +498,4 @@ export function EventCalendarViews({
     />
   )
 }
+//#endregion

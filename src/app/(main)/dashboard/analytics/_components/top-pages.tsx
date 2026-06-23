@@ -1,7 +1,10 @@
+//#region Imports
 import { Ellipsis } from "lucide-react";
 
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
+//#endregion
 
 const pages = [
   { bounce: "24%", path: "/dashboard", time: "3m 12s", views: "64.2k" },

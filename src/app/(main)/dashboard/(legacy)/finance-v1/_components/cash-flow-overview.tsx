@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import { ArrowDownLeft, ArrowUpRight } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, ReferenceLine, XAxis, YAxis } from "recharts";
 
@@ -8,6 +9,8 @@ import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } f
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { formatCurrency } from "@/lib/utils";
+
+//#endregion
 
 const chartData = [
   { month: "Jan", income: 5900, expenses: -4200 },

@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import {
@@ -17,6 +18,8 @@ import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle }
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { cn, formatCurrency } from "@/lib/utils";
 
+//#endregion
+
 type LedgerPriority = "Escalate" | "Coach" | "Reforecast" | null;
 
 type LedgerRow = {
@@ -33,6 +36,7 @@ type LedgerRow = {
   riskScore: number;
 };
 
+//#region LEDGER_ROWS
 const LEDGER_ROWS: LedgerRow[] = [
   {
     id: 1,
@@ -165,6 +169,7 @@ const LEDGER_ROWS: LedgerRow[] = [
     riskScore: 31,
   },
 ];
+//#endregion
 
 const priorityTone: Record<Exclude<LedgerPriority, null>, string> = {
   Escalate: "border-destructive/35 bg-destructive/10 text-destructive",
@@ -172,6 +177,7 @@ const priorityTone: Record<Exclude<LedgerPriority, null>, string> = {
   Reforecast: "border-amber-500/35 bg-amber-500/10 text-amber-700",
 };
 
+//#region ledgerColumns
 const ledgerColumns: ColumnDef<LedgerRow>[] = [
   {
     accessorKey: "account",
@@ -251,6 +257,7 @@ const ledgerColumns: ColumnDef<LedgerRow>[] = [
     ),
   },
 ];
+//#endregion
 
 export function ActionsRiskLedger() {
   const [sorting, setSorting] = React.useState<SortingState>([{ id: "riskScore", desc: true }]);

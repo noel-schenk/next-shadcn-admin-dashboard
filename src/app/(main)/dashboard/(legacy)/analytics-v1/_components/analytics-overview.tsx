@@ -1,5 +1,6 @@
 "use client";
 
+//#region Imports
 import * as React from "react";
 
 import { eachDayOfInterval, format, startOfDay, subDays } from "date-fns";
@@ -17,6 +18,8 @@ import { Command, CommandGroup, CommandItem, CommandList } from "@/components/ui
 import { Label } from "@/components/ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
+
+//#endregion
 
 type RiskView = "risk-view" | "momentum" | "quality";
 type FilterToggleKey = "enterpriseOnly" | "stalledOnly" | "overdueOnly" | "includeRenewals";
